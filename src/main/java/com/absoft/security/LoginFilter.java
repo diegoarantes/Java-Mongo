@@ -36,7 +36,7 @@ public class LoginFilter implements Filter {
         } else {
             //Retorna para a página de login
             new JsfRedirectStrategy().sendRedirect((HttpServletRequest) request, (HttpServletResponse) response,
-                    "/login?p=" + retornaPaginaSolicitada(request));
+                    "/login" + retornaPaginaSolicitada(request));
         }
     }
 
@@ -50,7 +50,7 @@ public class LoginFilter implements Filter {
 
     private String retornaPaginaSolicitada(ServletRequest request) {
         String pagina = ((HttpServletRequest) request).getRequestURI();
-        return pagina;
+        return pagina.equals("/") ? "" : "?p=" + pagina; // Se a página for '/' retona vazio senão ele retorna ?p=Página
     }
 
     //Algorithmo para desconectar usuário automaticamente
