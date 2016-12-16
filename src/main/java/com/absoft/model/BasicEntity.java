@@ -1,13 +1,14 @@
 package com.absoft.model;
 
+import java.io.Serializable;
 import org.bson.types.ObjectId;
 
 /**
  * Interface de base para entidades que serão persistidas
- * @author Diego Arantes
- * Data alteração 12/12/2016
+ *
+ * @author Diego Arantes Data alteração 16/12/2016
  */
-public interface BasicEntity {
+public interface BasicEntity extends Serializable {
 
     public ObjectId getId();
 }

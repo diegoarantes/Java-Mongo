@@ -1,8 +1,6 @@
 package com.absoft.infra;
 
 import com.mongodb.MongoClient;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 
@@ -13,8 +11,8 @@ import org.mongodb.morphia.Morphia;
 public enum MongoDBHelper {
     INSTANCE;
 
-    private Datastore datastore;
-    private Morphia morphia;
+    private final Datastore datastore;
+    private final Morphia morphia;
 
 //private final String SERVER_URL = "...";
 //private final int SERVER_PORT = 0;
@@ -26,10 +24,6 @@ public enum MongoDBHelper {
 
         //Adiciona o Conversor para BigDecimal
         morphia.getMapper().getConverters().addConverter(BigDecimalConverter.class);
-
-        //Desabilita os logs do MongoDB
-        Logger mongoLogger = Logger.getLogger("org.mongodb");
-        mongoLogger.setLevel(Level.SEVERE);
 
         // Cria a conexão com o MongoDB
         this.datastore = morphia.createDatastore(new MongoClient(), "absoft");
