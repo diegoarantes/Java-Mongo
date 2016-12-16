@@ -66,13 +66,13 @@
         </dependency>
         
         <!-- JavaMail (Biblioteca para envio de e-mails) -->
-        <dependency>
+<!--        <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
             <version>1.5.0</version>
             <type>jar</type>
         </dependency>
-        
+        -->
         <!-- JasperReport (Relatórios) -->
         <!--        <dependency>
             <groupId>net.sf.jasperreports</groupId>
