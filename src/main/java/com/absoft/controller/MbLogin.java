@@ -1,5 +1,6 @@
 package com.absoft.controller;
 
+import com.absoft.model.Usuario;
 import com.absoft.service.UsuarioService;
 import java.io.Serializable;
 import javax.faces.context.FacesContext;
@@ -52,6 +53,10 @@ public class MbLogin implements Serializable {
 
     }
 
+    public Usuario usuarioLogado(){
+        return service.usuarioLogado();
+    }
+    
     /**
      * Efetua logout do usuário do sistema
      *

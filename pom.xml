@@ -45,13 +45,13 @@
             <type>jar</type>
         </dependency>
         
-        <!--  Poseidon Theme (Tema para Primefaces) -->
-        <!--        <dependency>
+        <!--  Ultima Theme (Tema para Primefaces) -->
+        <dependency>
             <groupId>org.primefaces</groupId>
-            <artifactId>poseidon-theme</artifactId>
-            <version>1.0.0</version>
+            <artifactId>ultima-theme</artifactId>
+            <version>1.0.6</version>
             <type>jar</type>
-        </dependency>-->
+        </dependency>
         
         <!-- PrettyFaces -->
         <dependency>
@@ -66,7 +66,7 @@
         </dependency>
         
         <!-- JavaMail (Biblioteca para envio de e-mails) -->
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
             <version>1.5.0</version>
