@@ -50,7 +50,7 @@ public class LoginFilter implements Filter {
 
     private String retornaPaginaSolicitada(ServletRequest request) {
         String pagina = ((HttpServletRequest) request).getRequestURI();
-        return pagina.equals("/") ? "" : "?p=" + pagina; // Se a página for '/' retona vazio senão ele retorna ?p=Página
+        return pagina.equals("/") ? "" : "?url=" + pagina; // Se a página for '/' retona vazio senão ele retorna ?p=Página
     }
 
     //Algorithmo para desconectar usuário automaticamente

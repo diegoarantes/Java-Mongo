@@ -32,7 +32,7 @@ public class MbLogin implements Serializable {
     String pagina;
 
     public MbLogin() {
-        pagina = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("p");
+        pagina = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("url");
     }
 
     public String efetuarLogin() {
