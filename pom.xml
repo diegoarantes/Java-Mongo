@@ -46,12 +46,12 @@
         </dependency>
         
         <!--  Ultima Theme (Tema para Primefaces) -->
-        <dependency>
+<!--        <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>ultima-theme</artifactId>
             <version>1.0.6</version>
             <type>jar</type>
-        </dependency>
+        </dependency>-->
         
         <!-- PrettyFaces -->
         <dependency>
