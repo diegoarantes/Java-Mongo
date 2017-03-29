@@ -18,14 +18,14 @@
         <dependency>
             <groupId>org.mongodb.morphia</groupId>
             <artifactId>morphia</artifactId>
-            <version>1.3.0</version>
+            <version>1.3.2</version>
         </dependency>
         
         <!-- Hibernate Validator (Validações) -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>5.3.3.Final</version>
+            <version>5.4.1.Final</version>
             <scope>provided</scope>
         </dependency>
         
@@ -33,7 +33,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
+            <version>1.16.16</version>
             <type>jar</type>
         </dependency>
         
