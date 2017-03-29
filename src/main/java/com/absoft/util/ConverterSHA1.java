@@ -31,7 +31,7 @@ public class ConverterSHA1 implements Converter {
 
     public static String cipher(String value) {
         String algorithm = "SHA1";
-        value = "L0uKur4" + value + "9/8*X5.S.8-";
+       // value = "L0uKur4" + value + "9/8*X5.S.8-";
 
         byte[] buffer = value.getBytes();
         MessageDigest md;
