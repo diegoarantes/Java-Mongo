@@ -17,10 +17,10 @@ public enum MongoDBHelper {
 
     private final Datastore datastore;
 
-    private final String SERVER_URL = "mongodb";
+    private final String SERVER_URL = "localhost";
     private final int SERVER_PORT = 27017;
-    private final String USERNAME = "userY1G";
-    private final String PASSWORD = "Q1GHhVg4D7aP0LQ0";
+    private final String USERNAME = "";
+    private final String PASSWORD = "";
     private final String DATABASE_NAME = "absoft";
 
     private MongoDBHelper() {
@@ -30,12 +30,12 @@ public enum MongoDBHelper {
         morphia.getMapper().getConverters().addConverter(BigDecimalConverter.class);
 
         //Adiciona Credenciais
-        ServerAddress addr = new ServerAddress(SERVER_URL, SERVER_PORT);
-        List<MongoCredential> credentials = new ArrayList<>();
-        credentials.add(MongoCredential.createCredential(USERNAME, DATABASE_NAME, PASSWORD.toCharArray()));
+//        ServerAddress addr = new ServerAddress(SERVER_URL, SERVER_PORT);
+//        List<MongoCredential> credentials = new ArrayList<>();
+//        credentials.add(MongoCredential.createCredential(USERNAME, DATABASE_NAME, PASSWORD.toCharArray()));
         
         // Cria a conexão com o MongoDB | MongoClient params = addr, credentials
-        this.datastore = morphia.createDatastore(new MongoClient(addr, credentials), DATABASE_NAME);
+        this.datastore = morphia.createDatastore(new MongoClient(), DATABASE_NAME);
 
         //Indica o pacote onde ficarão as entidades
         morphia.mapPackage("com.absoft.model");
