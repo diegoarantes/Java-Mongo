@@ -2,9 +2,6 @@ package com.absoft.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  * @author Diego Arantes
  * @description Algoritmo para converter Strings para SHA1.
@@ -13,9 +10,9 @@ public class ConverterSHA1 {
 
     public static String cipher(String value) {
         byte[] buffer = value.getBytes();
-
+        
         try {
-            MessageDigest md = MessageDigest.getInstance("SHA1");
+            MessageDigest md = MessageDigest.getInstance("SHA-1");
             md.update(buffer);
             byte[] digest = md.digest();
             String hexValue = "";
@@ -28,7 +25,7 @@ public class ConverterSHA1 {
             }
             return hexValue;
         } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(ConverterSHA1.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println(ex.getMessage());
             return null;
         }
     }
