@@ -11,7 +11,7 @@ public enum Permissao {
     SYSALL("Todas as permissões do sistema");
 
     @Getter
-    private String descricao;
+    private final String descricao;
 
     private Permissao(String descricao) {
         this.descricao = descricao;

@@ -2,6 +2,7 @@ package com.absoft.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
 /**
  * @author Diego Arantes
  * @description Algoritmo para converter Strings para SHA1.
@@ -10,7 +11,7 @@ public class ConverterSHA1 {
 
     public static String cipher(String value) {
         byte[] buffer = value.getBytes();
-        
+
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-1");
             md.update(buffer);

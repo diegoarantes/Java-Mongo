@@ -6,7 +6,6 @@ import java.io.IOException;
 
 public class JsfRedirectStrategy {
 
-
     /**
      * Redirects the response to the supplied URL.
      * <p>
@@ -24,11 +23,8 @@ public class JsfRedirectStrategy {
                 && request.getHeader("faces-request").toLowerCase().indexOf("ajax") > -1;
 
         if (ajaxRedirect) {
-            //javax.faces.context.FacesContext ctxt = javax.faces.context.FacesContext.getCurrentInstance();
-            //ctxt.getExternalContext().redirect(redirectUrl);
-
             String ajaxRedirectXml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
-                    + "<partial-response><redirect url=\"" + redirectUrl + "\"></redirect></partial-response>";
+                                   + "<partial-response><redirect url=\"" + redirectUrl + "\"></redirect></partial-response>";
             response.setContentType("text/xml");
             response.getWriter().write(ajaxRedirectXml);
         } else {

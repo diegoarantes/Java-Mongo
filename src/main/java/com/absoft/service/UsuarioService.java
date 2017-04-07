@@ -21,6 +21,9 @@ public class UsuarioService {
     @Inject
     private Usuarios usuarios;
 
+    @Inject
+    private JsfMessage message;
+
     public boolean login(String user, String pass) {
 
         //Verifica Usuario e senha na Base
@@ -46,10 +49,10 @@ public class UsuarioService {
             return true;
 
         } else if (usu != null && !usu.isAtivo()) {//Se usuário for diferente de Nulo e está Inativo 
-            JsfMessage.advertencia("Usuário Inativo!");
+            message.advertencia(null, "Usuário Inativo!");
             return false;
         } else {
-            JsfMessage.erro("Usuário ou senha inválidos!");
+            message.erro(null, "Usuário ou senha inválidos!");
             return false;
         }
 

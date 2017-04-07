@@ -12,19 +12,17 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 public class JsfMessage {
+     FacesContext context = FacesContext.getCurrentInstance();
 
-    public static void info(String msg) {
-        FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage(FacesMessage.SEVERITY_INFO, msg, ""));
+    public void info(String titulo, String msg) {
+        context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, titulo, msg));
     }
 
-    public static void erro(String msg) {
-        FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage(FacesMessage.SEVERITY_ERROR, msg, ""));
+    public void erro(String titulo, String msg) {
+        context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, titulo, msg));
     }
 
-    public static void advertencia(String msg) {
-        FacesContext.getCurrentInstance().addMessage("",
-                new FacesMessage(FacesMessage.SEVERITY_WARN, msg, ""));
+    public void advertencia(String titulo, String msg) {
+context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, titulo, msg));
     }
 }
