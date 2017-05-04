@@ -9,6 +9,9 @@
             .ui-widget{
                 font-size: 13px;
             }
+            body{
+                background-color: #fafafa;
+            }
         </style>
     </h:head>
     <h:body onload="PF('dialogo').show()">
@@ -25,12 +28,6 @@
                     <p:commandButton value="Entrar" action="#{mbLogin.efetuarLogin()}"
                                      icon="ui-icon-person" update="@form" process="@form"/>
                 </h:panelGrid>
-
-
-
-
-
-
             </h:form>
         </p:dialog>
     </h:body>

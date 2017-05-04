@@ -49,10 +49,10 @@ public class UsuarioService {
             return true;
 
         } else if (usu != null && !usu.isAtivo()) {//Se usuário for diferente de Nulo e está Inativo 
-            message.advertencia("Usuário Inativo!", "Verifique com o Administrador!");
+            message.advertencia("Usuário Inativo!", "Verifique com o Administrador.");
             return false;
         } else {
-            message.erro("Usuário ou senha inválidos!", "Verifique os dados e tente novamente!");
+            message.erro("Usuário ou senha inválidos!", "Verifique os dados e tente novamente.");
             return false;
         }
 
