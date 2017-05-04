@@ -5,19 +5,34 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
+        <style>
+            .ui-widget{
+                font-size: 13px;
+            }
+        </style>
     </h:head>
-    <h:body>
-        <h:form>
-            <p:growl/>
-            <p:inputText placeholder="Usuário" value="#{mbLogin.usuario}" required="true" 
-                         requiredMessage="Digite o usuário!"/>
-            <p:password placeholder="Senha" value="#{mbLogin.senha}" feedback="false" 
-                        required="true" requiredMessage="Digite a senha!"/>
-            <p:commandButton value="Entrar" action="#{mbLogin.efetuarLogin()}"
-                             icon="ui-icon-person" update="@form" process="@form"/>
+    <h:body onload="PF('dialogo').show()">
+        <p:dialog header="Login" widgetVar="dialogo">
+            <h:form>
+                <p:growl id="growl" showDetail="true" sticky="true" />
+
+                <h:panelGrid columns="1">
+                    <p:inputText placeholder="Usuário" value="#{mbLogin.usuario}" required="true" 
+                                 requiredMessage="Digite o usuário!" size="30"/>
+                    
+                    <p:password placeholder="Senha" value="#{mbLogin.senha}" size="30" 
+                                required="true" requiredMessage="Digite a senha!"/>
+                    <p:commandButton value="Entrar" action="#{mbLogin.efetuarLogin()}"
+                                     icon="ui-icon-person" update="@form" process="@form"/>
+                </h:panelGrid>
 
 
-        </h:form>
+
+
+
+
+            </h:form>
+        </p:dialog>
     </h:body>
 </html>
 

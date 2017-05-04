@@ -12,7 +12,8 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 public class JsfMessage {
-     FacesContext context = FacesContext.getCurrentInstance();
+
+    FacesContext context = FacesContext.getCurrentInstance();
 
     public void info(String titulo, String msg) {
         context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, titulo, msg));
@@ -23,6 +24,6 @@ public class JsfMessage {
     }
 
     public void advertencia(String titulo, String msg) {
-context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, titulo, msg));
+        context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, titulo, msg));
     }
 }
