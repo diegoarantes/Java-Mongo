@@ -74,15 +74,7 @@ public class UsuarioService {
 
     private String retornaIP() {
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
-
-        String ip = request.getHeader("x-forwarded-for");
-        if (ip == null) {
-            ip = request.getHeader("X_FORWARDED_FOR");
-            if (ip == null) {
-                ip = request.getRemoteAddr();
-            }
-        }
-        return ip;
+        return request.getRemoteAddr();
     }
 
 }
