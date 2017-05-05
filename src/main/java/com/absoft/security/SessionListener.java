@@ -25,7 +25,7 @@ public class SessionListener implements HttpSessionListener, Serializable {
 
     @Override
     public void sessionCreated(HttpSessionEvent hse) {
-        System.out.println("Sessão Criada !!!!");
+        //  System.out.println("Sessão Criada !!!!");
     }
 
     @Override
@@ -40,7 +40,7 @@ public class SessionListener implements HttpSessionListener, Serializable {
             usuario.setOnline(false);
             usuarios.save(usuario);
 
-            System.out.println("Sessão Destruída !!!! (" + usuario.getUsuario() + ")");
+            //   System.out.println("Sessão Destruída !!!! (" + usuario.getUsuario() + ")");
         }
 
     }
