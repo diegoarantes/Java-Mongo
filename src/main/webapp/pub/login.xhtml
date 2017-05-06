@@ -12,17 +12,21 @@
             body{
                 background-color: #fafafa;
             }
+            .ui-button, .ui-button span, button.ui-button.ui-state-default span, .ui-button.ui-state-default span {
+                font-weight: 300;
+            }
         </style>
     </h:head>
     <h:body onload="PF('dialogo').show()">
-        <p:dialog header="Login" widgetVar="dialogo">
+        <p:dialog header="Login" widgetVar="dialogo" closable="false" resizable="false" 
+                  draggable="false" responsive="true">
             <h:form>
                 <p:growl id="growl" showDetail="true" sticky="true" />
 
                 <h:panelGrid columns="1">
                     <p:inputText placeholder="Usuário" value="#{mbLogin.usuario}" required="true" 
                                  requiredMessage="Digite o usuário!" size="30"/>
-                    
+
                     <p:password placeholder="Senha" value="#{mbLogin.senha}" size="30" 
                                 required="true" requiredMessage="Digite a senha!"/>
                     <p:commandButton value="Entrar" action="#{mbLogin.efetuarLogin()}"

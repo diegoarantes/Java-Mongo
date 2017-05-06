@@ -5,14 +5,25 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
+        <style>
+            .ui-widget{
+                font-size: 13px;
+            }
+            body{
+                background-color: #fafafa;
+            }
+            .ui-button, .ui-button span, button.ui-button.ui-state-default span, .ui-button.ui-state-default span {
+                font-weight: 300;
+            }
+        </style>
     </h:head>
     <h:body>
         <h:form>
             <p:commandButton value="Teste"/>
-            
+
             <p:commandButton value="logout" action="#{mbLogin.efetuarLogout()}" ajax="false"/>
         </h:form>
-        
+
     </h:body>
 </html>
 
