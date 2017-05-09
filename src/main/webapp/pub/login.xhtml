@@ -20,16 +20,16 @@
     <h:body onload="PF('dialogo').show()">
         <p:dialog header="Login" widgetVar="dialogo" closable="false" resizable="false" 
                   draggable="false" responsive="true">
-            <h:form>
+            <h:form id="login">
                 <p:growl id="growl" showDetail="true" sticky="true" />
 
                 <h:panelGrid columns="1">
-                    <p:inputText placeholder="Usuário" value="#{mbLogin.usuario}" required="true" 
+                    <p:inputText id="user" placeholder="Usuário" value="#{mbLogin.usuario}" required="true" 
                                  requiredMessage="Digite o usuário!" size="30"/>
 
-                    <p:password placeholder="Senha" value="#{mbLogin.senha}" size="30" 
+                    <p:password id="pass" placeholder="Senha" value="#{mbLogin.senha}" size="30" 
                                 required="true" requiredMessage="Digite a senha!"/>
-                    <p:commandButton value="Entrar" action="#{mbLogin.efetuarLogin()}"
+                    <p:commandButton id="btLogin" value="Entrar" action="#{mbLogin.efetuarLogin()}"
                                      icon="ui-icon-person" update="@form" process="@form"/>
                 </h:panelGrid>
             </h:form>
