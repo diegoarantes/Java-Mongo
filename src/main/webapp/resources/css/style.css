@@ -1,0 +1,14 @@
+/* 
+    Created on : 15/05/2017, 11:36:52
+    Author     : D.Arantes
+*/
+
+.ui-widget{
+    font-size: 13px;
+}
+body{
+    background-color: #fafafa;
+}
+.ui-button, .ui-button span, button.ui-button.ui-state-default span, .ui-button.ui-state-default span {
+    font-weight: 300;
+}

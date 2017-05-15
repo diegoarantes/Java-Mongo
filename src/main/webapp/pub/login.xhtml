@@ -5,17 +5,7 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>ABSoft - Tecnologia</title>
-        <style>
-            .ui-widget{
-                font-size: 13px;
-            }
-            body{
-                background-color: #fafafa;
-            }
-            .ui-button, .ui-button span, button.ui-button.ui-state-default span, .ui-button.ui-state-default span {
-                font-weight: 300;
-            }
-        </style>
+        <h:outputStylesheet library="css" name="style.css"/>
     </h:head>
     <h:body onload="PF('dialogo').show()">
         <p:dialog header="Login" widgetVar="dialogo" closable="false" resizable="false" 
