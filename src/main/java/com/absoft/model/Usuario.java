@@ -1,5 +1,6 @@
 package com.absoft.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import lombok.Data;
@@ -34,5 +35,5 @@ public class Usuario implements BasicEntity {
     private Date horaUltimoLogon;
 
     @Embedded
-    private List<Permissao> permissoes;
+    private List<Permissao> permissoes = new ArrayList<>();
 }
