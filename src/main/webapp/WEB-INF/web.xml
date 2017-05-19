@@ -20,11 +20,11 @@
         <welcome-file>/app/dashboard.xhtml</welcome-file>
     </welcome-file-list>
     <!-- PÁGINAS DE ERRO-->
-    <error-page>
+    <!--    <error-page>
         <error-code>404</error-code>
         <location>/pub/404.xhtml</location>
     </error-page>
-    
+    -->
     <!-- Configurações Filter do Login -->
     <filter>
         <filter-name>LoginFilter</filter-name>
