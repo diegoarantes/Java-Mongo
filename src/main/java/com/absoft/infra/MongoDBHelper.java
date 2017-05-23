@@ -21,10 +21,7 @@ public enum MongoDBHelper {
 
     private MongoDBHelper() {
         final Morphia morphia = new Morphia();
-
-        //Adiciona o Conversor para BigDecimal
-        morphia.getMapper().getConverters().addConverter(BigDecimalConverter.class);
-
+        
         //Adiciona Credenciais
 //        ServerAddress addr = new ServerAddress(SERVER_URL, SERVER_PORT);
 //        List<MongoCredential> credentials = new ArrayList<>();
