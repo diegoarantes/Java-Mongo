@@ -8,7 +8,7 @@ import org.bson.types.ObjectId;
  *
  * @author Diego Arantes Data alteração 16/12/2016
  */
-public interface BasicEntity extends Serializable {
+public interface BaseEntity extends Serializable {
 
     public ObjectId getId();
 }

@@ -1,17 +1,17 @@
 package com.absoft.repository;
 
-import com.absoft.model.BasicEntity;
 import java.util.List;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.query.Query;
+import com.absoft.model.BaseEntity;
 
 /**
  *
  * @author Diego Arantes
  * @param <T> Classe
  */
-public abstract class BaseRepository<T extends BasicEntity> {
+public abstract class BaseRepository<T extends BaseEntity> {
 
     /**
      * Classe da entidade, necessário para o método

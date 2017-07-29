@@ -18,7 +18,7 @@ import org.mongodb.morphia.annotations.Indexed;
  */
 @Entity(value = "usuarios", noClassnameStored = true)
 @Data
-public class Usuario implements BasicEntity {
+public class Usuario implements BaseEntity {
 
     @Id
     private ObjectId id;
